@@ -8,14 +8,6 @@ deploy:
   provider: npm
   email: mengfei0053@live.com
   api_key: $NPM_TOKEN 
+  on:
+    branch: release
 
-script:
-  - npm run test
-  - echo $NPM_TOKEN
-  - npm --version
-  - node --version
-  - npm publish 
-
-branches:
-  only:
-    - release
