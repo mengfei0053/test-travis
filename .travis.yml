@@ -3,6 +3,7 @@ install:
   - npm ci
 script:
   - npm run test
+  - npm --version
 
 branches:
   only:
