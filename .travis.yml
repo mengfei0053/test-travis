@@ -3,13 +3,18 @@ node_js:
   - lts/*
 install:
   - npm ci
+
+deploy:
+  provider: npm
+  email: mengfei0053@live.com
+  api_key: $NPM_TOKEN 
+
 script:
   - npm run test
-  - npm config set //<registry-url>/:_authToken $NPM_TOKEN
   - echo $NPM_TOKEN
   - npm --version
   - node --version
-  - npm publish --access public
+  - npm publish 
 
 branches:
   only:
