@@ -4,6 +4,8 @@ node_js:
 install:
   - npm ci
 
+script:
+  - npm --version  
 deploy:
   provider: npm
   email: mengfei0053@live.com
