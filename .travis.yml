@@ -4,6 +4,7 @@ install:
 script:
   - npm run test
   - npm --version
+  - node --version
 
 branches:
   only:
