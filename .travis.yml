@@ -5,8 +5,11 @@ install:
   - npm ci
 script:
   - npm run test
+  - npm config set //<registry-url>/:_authToken $NPM_TOKEN
+  - echo $NPM_TOKEN
   - npm --version
   - node --version
+  - npm publish --access public
 
 branches:
   only:
